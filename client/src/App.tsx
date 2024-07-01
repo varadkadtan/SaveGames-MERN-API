@@ -18,7 +18,7 @@ const App: React.FC = () => {
   useEffect(() => {
     const fetchFromMobyGames = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/fetch-games');
+        const response = await axios.get('https://savegames-mern-api.onrender.com/fetch-games');
         setGames(response.data);
         setFilteredGames(response.data);
 
@@ -64,7 +64,7 @@ const App: React.FC = () => {
 
   const handleAddGame = async (game: Game) => {
     try {
-      const response = await axios.post('http://localhost:5000/add-game', game);
+      const response = await axios.post('https://savegames-mern-api.onrender.com/add-game', game);
       console.log('Game added:', response.data);
       setShowRefreshMessage(true); // Show refresh message
       // Automatically dismiss message after 5 seconds

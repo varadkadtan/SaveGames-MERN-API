@@ -18,7 +18,7 @@ const MyGames = () => {
   useEffect(() => {
     const fetchGames = async () => {
       try {
-        const response = await axios.get<Game[]>('http://localhost:5000/api/games');
+        const response = await axios.get<Game[]>('https://savegames-mern-api.onrender.com/api/games');
         setGames(response.data);
       } catch (error) {
         console.error('Error fetching data:', error);
@@ -30,7 +30,7 @@ const MyGames = () => {
 
   const deleteGame = async (gameId: string) => {
     try {
-      await axios.delete(`http://localhost:5000/api/games/${gameId}`);
+      await axios.delete(`https://savegames-mern-api.onrender.com/api/games/${gameId}`);
       setGames(games.filter((game) => game._id !== gameId));
       setShowRemoveMessage(true);
 
@@ -45,7 +45,7 @@ const MyGames = () => {
 
   const markAsFavourite = async (gameId: string) => {
     try {
-      await axios.post(`http://localhost:5000/api/games/${gameId}/favourite`);
+      await axios.post(`https://savegames-mern-api.onrender.com/api/games/${gameId}/favourite`);
       setGames((games) =>
         games.map((game) => (game._id === gameId ? { ...game, favourite: true } : game))
       );
@@ -56,7 +56,7 @@ const MyGames = () => {
 
   const unmarkAsFavourite = async (gameId: string) => {
     try {
-      await axios.post(`http://localhost:5000/api/games/${gameId}/unfavourite`);
+      await axios.post(`https://savegames-mern-api.onrender.com/api/games/${gameId}/unfavourite`);
       setGames((games) =>
         games.map((game) => (game._id === gameId ? { ...game, favourite: false } : game))
       );
