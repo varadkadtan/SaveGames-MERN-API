@@ -10,6 +10,10 @@ SaveGames is a full-stack web application built with the MERN stack (MongoDB, Ex
 - Game search and filtering
 - Responsive UI for desktop and mobile devices
 
+![Screenshot 2024-07-02 140457](https://github.com/varadkadtan/SaveGames-MERN-API/assets/103556886/543dc094-6d00-463a-a79d-058e570905a2)
+![Screenshot 2024-07-02 140559](https://github.com/varadkadtan/SaveGames-MERN-API/assets/103556886/28800690-bdc2-41e7-ba12-d5e28fb05e2b)
+
+
 ## Technologies Used
 
 - **Frontend**: React.js, React Router, Axios, Bootstrap
