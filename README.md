@@ -50,7 +50,7 @@ To run this project locally, follow these steps:
 4. **Start the backend server**:
 
    ```bash
-   noder server.mjs
+   node server.mjs
    ```
 
    This will start the backend server on `http://localhost:5000`.
